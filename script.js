@@ -44,4 +44,4 @@ function mostraAlternativas (){
         caixaAlternativas.appendChild(botaoAlternativas)
     }
 }
-mostraPerguta()
+mostraPergunta()
