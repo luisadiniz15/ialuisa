@@ -9,22 +9,44 @@ const perguntas = [
     {
         enunciado: "Quais sãos as principais causas da queimada?",
         alternativas: [
-            "Na maioria das vezes, essas queimadas são provocadas pela ação humana de maneira criminosa.",
-            "O calor do sol."
+            {
+                texto:"Na maioria das vezes, essas queimadas são provocadas pela ação humana de maneira criminosa.",
+                afirmacao:""
+            },
+            {
+                texto:"O calor do sol.",
+                afirmacao:""
+            }
+            
+            
         ]
     },
     {
         enunciado: "Como as queimadas afetam uma cidade?",
         alternativas: [
-            "Não afeta em nada",
-            "Destruir áreas produtivas como lavouras e pastagens."
+            {
+                texto: "Não afeta em nada",
+                afirmacao:
+            },
+            {
+                texto: "Destruir áreas produtivas como lavouras e pastagens.",
+                afirmacao:
+            }
+        
         ]
     },
     {
         enunciado: "Quais são algumas medidas eficazes de prevenir as queimadas?",
         alternativas: [
-            "Extinção Responsável de Fogueiras e Fontes de Calor",
-            "Deixar fogueiras acesas"
+            {
+                texto: "Extinção Responsável de Fogueiras e Fontes de Calor",
+                afirmacao:
+
+            },
+            {
+                texto: "Deixar fogueiras acesas",
+            }
+            
         ]
     },
 ];
@@ -38,11 +60,16 @@ function mostraPergunta() {
     mostraAlternativas ();
 }
 
-function mostraAlternativas (){
-    for(const alternativa of perguntaAtual.alternativas){
-        const botaoAlternativas= document.createElement("button");
-        botaoAlternativas.textContent= alternativa;
-        caixaAlternativas.appendChild(botaoAlternativas)
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+      const botaoAlternativas = document.createElement("button");
+      botaoAlternativas.textContent = alternativa.texto;
+      botaoAlternativas.addEventListener("click", function () {
+        atual++;
+        mostraPergunta();
+      });
+      caixaAlternativas.appendChild(botaoAlternativas);
     }
-}
+  }
+  
 mostraPergunta();
