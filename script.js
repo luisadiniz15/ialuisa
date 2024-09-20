@@ -26,11 +26,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Não afeta em nada",
-                afirmacao:
+                afirmacao:""
             },
             {
                 texto: "Destruir áreas produtivas como lavouras e pastagens.",
-                afirmacao:
+                afirmacao:""
             }
         
         ]
@@ -40,11 +40,12 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Extinção Responsável de Fogueiras e Fontes de Calor",
-                afirmacao:
+                afirmacao:""
 
             },
             {
                 texto: "Deixar fogueiras acesas",
+                afirmacao:""
             }
             
         ]
